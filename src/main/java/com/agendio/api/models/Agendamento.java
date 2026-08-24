@@ -22,4 +22,6 @@ public class Agendamento {
 //    List<UsuarioModel> listaDeUsuariosEnvolvidos;
 
 //    UsuarioModel creatorUser;
+
+
 }

@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioServices {
@@ -33,6 +34,10 @@ public class UsuarioServices {
         String encryptPass = passwordEncoder.encode(u.getPasswordUser());
         u.setPasswordUser(encryptPass);
         return repo.save(u);
+    }
+
+    public Optional<UsuarioModel> findUserById(Long id){
+        return repo.findById(id);
     }
 
 }
