@@ -36,10 +36,10 @@ public class UsuarioModel {
 //    List<Agendamento> listaDeAgendamentos;
 
     // Construtor da classe
-    public UsuarioModel(String email, String nameUser, String passwordUser) {
-        this.email = email;
-        this.nameUser = nameUser;
-        this.passwordUser = passwordUser;
-    }
+//    public UsuarioModel(String email, String nameUser, String passwordUser) {
+//        this.email = email;
+//        this.nameUser = nameUser;
+//        this.passwordUser = passwordUser;
+//    }
 
 }

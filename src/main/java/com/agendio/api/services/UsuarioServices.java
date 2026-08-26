@@ -21,12 +21,9 @@ public class UsuarioServices {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+
     public List<UsuarioModel> findAllUsers(){
-        try {
             return repo.findAll();
-        } catch (Exception e){
-            return new ArrayList<UsuarioModel>(null);
-        }
     }
 
 
