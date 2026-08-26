@@ -3,6 +3,8 @@ package com.agendio.api.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 
 @Entity
@@ -11,42 +13,33 @@ public class UsuarioModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    @Setter
     private Long id;
 
+    @Setter
+    @Getter
     @Column(name = "email")
     private String email;
 
     @Column(name = "nameUser")
+    @Setter
+    @Getter
     private String nameUser;
 
     @Column(name = "passwordUser")
+    @Setter
+    @Getter
     private String passwordUser;
 
 //    @Column(name = "agendamento_id")
 //    List<Agendamento> listaDeAgendamentos;
 
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
+    // Construtor da classe
+    public UsuarioModel(String email, String nameUser, String passwordUser) {
         this.email = email;
-    }
-
-    public String getNameUser() {
-        return nameUser;
-    }
-
-    public void setNameUser(String nameUser) {
         this.nameUser = nameUser;
-    }
-
-    public String getPasswordUser() {
-        return passwordUser;
-    }
-
-    public void setPasswordUser(String passwordUser) {
         this.passwordUser = passwordUser;
     }
+
 }
