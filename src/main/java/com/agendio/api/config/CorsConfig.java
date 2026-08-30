@@ -20,7 +20,8 @@ public class CorsConfig {
         configuration.setAllowedOriginPatterns(List.of(
                 "http://192.168.*.*:*",
                 "http://10.*.*.*:*",
-                "http://localhost:*"
+                "http://localhost:*",
+                "https://localhost:*"
         ));
 
         // Métodos permitidos

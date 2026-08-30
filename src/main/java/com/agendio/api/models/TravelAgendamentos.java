@@ -16,8 +16,6 @@ public class TravelAgendamentos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-
-
     Agendamento agendamento;
 
     @ManyToOne

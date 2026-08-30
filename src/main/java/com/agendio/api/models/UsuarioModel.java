@@ -42,4 +42,5 @@ public class UsuarioModel {
 //        this.passwordUser = passwordUser;
 //    }
 
+
 }

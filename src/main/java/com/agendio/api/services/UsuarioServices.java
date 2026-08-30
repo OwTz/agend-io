@@ -3,6 +3,7 @@ package com.agendio.api.services;
 
 import com.agendio.api.models.UsuarioModel;
 import com.agendio.api.repository.UsuarioRepository;
+import jakarta.validation.constraints.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -33,8 +34,15 @@ public class UsuarioServices {
         return repo.save(u);
     }
 
-    public Optional<UsuarioModel> findUserById(Long id){
-        return repo.findById(id);
+    public UsuarioModel findUserById(Long id){
+
+        return repo.findById(id).orElseThrow();
+    }
+
+    public Optional<UsuarioModel> deleteUserById(Long id){
+        Optional<UsuarioModel> u = repo.findById(id);
+        repo.deleteById(id);
+        return u;
     }
 
 }
